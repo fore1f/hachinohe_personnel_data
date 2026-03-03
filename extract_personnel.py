@@ -89,7 +89,7 @@ def main():
         
     print(f"選択されたファイル: {file_path}")
     base_name = os.path.splitext(os.path.basename(file_path))[0]
-    output_path = os.path.join("C:\\Users\\tked1\\py\\hachinohe_personnel_data", f"{base_name}_抽出結果.txt")
+    output_path = os.path.join(os.path.dirname(file_path), f"{base_name}_抽出結果.txt")
     
     # 実行時の月を取得
     current_month = datetime.datetime.now().month

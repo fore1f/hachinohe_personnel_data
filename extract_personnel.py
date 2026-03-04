@@ -73,7 +73,7 @@ def main():
     root.withdraw()
     root.attributes('-topmost', True)
     
-    initial_dir = "C:\\Users\\tked1\\py\\hachinohe"
+    initial_dir = "C:\\Users\\tked1\\py\\01_hachinohe_personnel\\hachinohe"
     if not os.path.exists(initial_dir):
         initial_dir = "C:\\"
         

@@ -8,3 +8,8 @@ wheels/
 
 # Virtual environments
 .venv
+credentials.json
+token.json
+.env
+*.bak
+.venv/

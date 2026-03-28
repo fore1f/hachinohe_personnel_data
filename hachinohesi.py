@@ -202,6 +202,13 @@ def main():
                     if display_colA == "出向":
                         # 「出向」の場合は「へ出向」にし、・を入れない
                         line = f"\t{_bu}{colC}へ出向{sep_old}{formatted_old_job}{sep_name}{colD}"
+                    elif display_colA == "併任解除":
+                        # 併任解除：部名は不要、新職の末尾に「へ」がなければ追加
+                        dest = colC
+                        if dest and not dest.endswith("へ"):
+                            dest += "へ"
+                        dest += "・併任解除"
+                        line = f"\t{dest}{sep_old}{formatted_old_job}{sep_name}{colD}"
                     else:
                         line = f"\t{_bu}{colC}・{display_colA}{sep_old}{formatted_old_job}{sep_name}{colD}"
                     output_lines.append(line)
